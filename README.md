@@ -17,7 +17,7 @@ After you setup your webserver. Open the command line inside the web server's ro
 we recommend installing this package through  [composer](http://getcomposer.org/) :
 
 ```bash
-composer create-project "console" mazentouati/snacks-console
+composer create-project mazentouati/snacks-console "console"
 ```
 
 *Note: make sure that your web server enables the RewriteEngine.*

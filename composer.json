@@ -9,6 +9,7 @@
             "email": "mazen_touati@hotmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.1.0",
         "slim/slim": "^3.11",
