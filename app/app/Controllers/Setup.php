@@ -1,11 +1,11 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace APP\Controllers;
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-
-use \APP\Helpers;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Setup
 {
@@ -35,7 +35,7 @@ class Setup
         }
 
         ob_start();
-        include(VIEWS . 'setup.php');
+        include VIEWS.'setup.php';
         $view = ob_get_contents();
         ob_end_clean();
 
@@ -64,6 +64,7 @@ class Setup
         if (!testDatabaseConnectivity($driver, $host, $database, $username, $password)) {
             $this->container['flash']->addMessage('error', true);
             $this->container['flash']->addMessage('old', $inputs);
+
             return $response->withHeader('Location', resolveRoute('setup'));
         }
 

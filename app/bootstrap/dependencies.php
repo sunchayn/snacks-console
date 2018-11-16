@@ -1,11 +1,12 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 session_start();
 
 $container = $app->getContainer();
 
-
 $container['config'] = function ($c) {
-    return \MazenTouati\Simple2wayConfig\S2WConfigFactory::create(ROOT . '\core\config');
+    return \MazenTouati\Simple2wayConfig\S2WConfigFactory::create(ROOT.'\core\config');
 };
 
 $container['db'] = function ($c) {
@@ -13,7 +14,7 @@ $container['db'] = function ($c) {
     $db = $c['config']->get('database.drivers.mysql');
 
     $pdo = new PDO(
-      $driver . ':host=' . $db['host'] . ';dbname=' . $db['database'] . ';charset=' . $db['charset'],
+      $driver.':host='.$db['host'].';dbname='.$db['database'].';charset='.$db['charset'],
       $db['username'],
       $db['password']
   );

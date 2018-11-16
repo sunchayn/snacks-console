@@ -1,5 +1,6 @@
 <?php
+
 return [
-    'displayErrorDetails' => true,
+    'displayErrorDetails'    => true,
     'addContentLengthHeader' => false,
 ];

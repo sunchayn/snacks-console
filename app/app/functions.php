@@ -3,6 +3,7 @@
 function resolveRoute($name, $args = [])
 {
     global $app;
+
     return $app->getContainer()->get('router')->pathFor($name, $args);
 }
 
@@ -11,11 +12,11 @@ function testDatabaseConnectivity($driver, $host, $database, $username, $passwor
     try {
         $options = [
             \PDO::ATTR_TIMEOUT => 5,
-            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
+            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
         ];
 
         $pdo = new \PDO(
-            $driver . ':host=' . $host . ';dbname=' . $database . ';charset=utf8',
+            $driver.':host='.$host.';dbname='.$database.';charset=utf8',
             $username,
             $password,
             $options
