@@ -1,10 +1,12 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace API\Controllers;
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-use \API\Helpers\DataManager as DataManager;
+use API\Helpers\DataManager as DataManager;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Query
 {
@@ -33,7 +35,7 @@ class Query
             $data['currentPage'] = $DataManager->paginator->getCurrentPage();
             $data['totalPages'] = $DataManager->paginator->getTotalPages();
             $data['rowsPerPage'] = $DataManager->paginator->getRowsPerPage();
-            $data['message'] = $data['count'] . ' rows has been returned.';
+            $data['message'] = $data['count'].' rows has been returned.';
             $data['columns'] = isset($fetchedData[0]) ? array_keys($fetchedData[0]) : [];
             $data['rows'] = $fetchedData;
         } else {

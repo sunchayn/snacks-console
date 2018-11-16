@@ -17,11 +17,11 @@ class Paginator
         $this->performQueries($db);
     }
 
-
     /**
      * create two queries out of the given query :
      * - query to count the rows
-     * - query to paginate the data
+     * - query to paginate the data.
+     *
      * @todo handle the case when the query already have the limit clause.
      */
     public function craftQuries($query)
@@ -31,7 +31,7 @@ class Paginator
         $this->countQuery = preg_replace('/(select ).*( from.*)/i', '$1 count(*) as total $2', $query);
 
         $startFrom = ($this->config['current_page'] * $this->config['item_per_page']) - $this->config['item_per_page'];
-        $this->paginationQuery = $query . ' limit ' .  $startFrom . ', ' . $this->config['item_per_page'];
+        $this->paginationQuery = $query.' limit '.$startFrom.', '.$this->config['item_per_page'];
     }
 
     public function performQueries($db)

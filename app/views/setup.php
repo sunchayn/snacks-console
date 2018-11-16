@@ -21,28 +21,32 @@
     <div class="setup-wrapper">
       <div class="setup-introduction">
         <img src="public/static/logo.png" class="setup-logo" alt="snacks db logo">
-        <?php if ($error) { ?>
+        <?php if ($error) {
+    ?>
         <h2 class="is-error">Ooops, we could not establish a connection using these credentials</h2>
         <h3>Let's fix them</h3>
-        <?php } else { ?>
+        <?php
+} else {
+        ?>
         <h2>Howdie, it seems that you need to setup your console</h2>
         <h3>Let's do it together</h3>
-        <?php } ?>
+        <?php
+    } ?>
       </div>
 
 
       <div class="boxedForm">
         <!-- <h2 class="boxedForm-heading">Login to your account ( <a href="#">need help ?</a> )</h2> -->
-        <form action="<?=$actionRoute;?>" method="POST" class="form">
+        <form action="<?=$actionRoute; ?>" method="POST" class="form">
           
           <div class="form-row">
             <label for="host">>_host</label>
-            <input type="text" id="host" placeholder="127.0.0.1 💖" name="host" value="<?=old('host', '');?>">
+            <input type="text" id="host" placeholder="127.0.0.1 💖" name="host" value="<?=old('host', ''); ?>">
           </div>
 
           <div class="form-row">
             <label for="database">>_database</label>
-            <input type="text" id="database" placeholder="test" name="database" value="<?=old('database', '');?>">
+            <input type="text" id="database" placeholder="test" name="database" value="<?=old('database', ''); ?>">
           </div>
 
           <div class="form-row">
