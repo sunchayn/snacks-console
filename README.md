@@ -2,7 +2,7 @@
 
 [![GitHub (pre-)release](https://img.shields.io/github/release-pre/mazentouati/snacks-console.svg)](https://github.com/mazentouati/snacks-console/releases/tag/0.1.0)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mazentouati/snacks-console/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mazentouati/snacks-console/?branch=master)
-[![StyleCI](https://styleci.io/repos/157292080/shield)](https://styleci.io/repos/)
+[![StyleCI](https://styleci.io/repos/157292080/shield)](https://styleci.io/repos/157928738)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](./LICENSE)
 
 An intuitive browser-based SQL console to run and save SQL queries.
