@@ -6,8 +6,7 @@ use MazenTouati\Simple2wayConfig\S2WConfigException;
 
 class DataManager
 {
-
-  // the query to run
+    // the query to run
     public $query = '';
     public $queryResult = null;
     //data to return in case of error
@@ -19,7 +18,7 @@ class DataManager
     public $paginator = null;
     private $paginatorConfig = [
     'item_per_page' => 25,
-    'current_page' => 1
+    'current_page'  => 1,
   ];
 
     private $customMessage = false;
@@ -115,13 +114,16 @@ class DataManager
             //run query against database to make sure the database name is valid
             if ($this->db->query($this->query) !== false) {
                 $this->config->set('database.drivers.mysql.database', $database);
+
                 try {
                     $this->config->sync('database');
                 } catch (S2WConfigException $e) {
                     $this->customMessage = $e->getMessage();
+
                     return false;
                 }
-                $this->customMessage = '`'. $database . "` is your new database now.";
+                $this->customMessage = '`'.$database.'` is your new database now.';
+
                 return true;
             }
         }

@@ -1,9 +1,11 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace APP\Controllers;
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Console
 {
@@ -27,7 +29,7 @@ class Console
         $username = $this->container['config']->get('database.drivers.mysql.username');
 
         ob_start();
-        include(VIEWS . 'index.php');
+        include VIEWS.'index.php';
         $view = ob_get_contents();
         ob_end_clean();
 

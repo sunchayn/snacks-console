@@ -35,7 +35,7 @@
   </div>
 
   <script>
-    window.username = '<?=$username;?>';
+    window.username = '<?=$username; ?>';
   </script>
   <script src="public/js/bundle.js"></script>
   <script src="public/js/vendor.min.js"></script>

@@ -1,4 +1,5 @@
 <?php
+
 namespace API\Helpers;
 
 function starts_with($haystack, $needle, $case_sensitive = true)
