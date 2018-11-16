@@ -16,11 +16,12 @@ After you setup your webserver. Open the command line inside the web server's ro
 ### through composer
 we recommend installing this package through  [composer](http://getcomposer.org/) :
 
-*Note: make sure that your web server enables the RewriteEngine.*
-
 ```bash
 composer create-project "console" mazentouati/snacks-console
 ```
+
+*Note: make sure that your web server enables the RewriteEngine.*
+
 ## Plans
 
 This is an initial version, it's just a prototype to test and enhance the current experience. We plan to add the following features :
