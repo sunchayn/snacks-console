@@ -1,0 +1,130 @@
+.result {
+  flex: 1 1 1px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-dummyMessage {
+  text-align: center;
+  flex: 1 1 1px;
+  & h1 {
+    margin: 0;
+  }
+
+  & h3 {
+    margin: 0;
+  }
+}
+
+.result-heading {
+  padding: $padding;
+  height: $result-heading-height;
+  border-bottom: 1px solid $color-border;
+  user-select: none;
+
+  display: flex;
+
+  & h2 {
+    font-family: $body-font;
+    margin: 0 0 $slim-margin 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  & span {
+    color: $color-muted;
+    font-weight: 400;
+  }
+}
+
+.result-heading-bookmark {
+  margin-left: auto;
+  & button {
+    height: calc( #{$result-heading-height} - #{$padding*2} );
+    width: calc( #{$result-heading-height} - #{$padding*2} );
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  & .icon {
+    margin: 0;
+    font-size: 20px;
+    color: $result-bookmark-color;
+
+    &.empty {
+      opacity: .6;
+      will-change: opacity;
+      transition: opacity 300ms ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.result-content {
+  flex: 1 1 1px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  
+  overflow-x: auto;
+  overflow-y: auto;
+
+}
+
+.result-info {
+  display: flex;
+  height: $result-table-bars-height;
+  flex: 0 0 $result-table-bars-height;
+
+  border-top: 1px solid $color-border;
+  padding-left: $padding;
+
+  user-select: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,1) 50%,
+    rgba(246,246,246,1) 51%,
+    rgba(246,246,246,1) 100%);
+
+  & > span {
+    height: $result-table-bars-height;
+    line-height: $result-table-bars-height;
+  }
+
+}
+
+.result-pagination {
+  margin-left: auto;
+  & > span {
+    padding: 0 $padding;
+    border-left: 1px solid $color-border;
+  }
+
+  & > button {
+    padding: 0 $padding;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    border-left: 1px solid $color-border;
+    cursor: pointer;
+
+    &[disabled] {
+      opacity: .8;
+      color: $color-muted;
+      cursor: default;
+    }
+
+    & > .icon {
+      margin: 0;
+    }
+  }
+}

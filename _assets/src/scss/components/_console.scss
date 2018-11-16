@@ -1,0 +1,26 @@
+.console {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: $color-body;
+  background: linear-gradient(
+    nth($console-background-color, 1),
+    nth($console-background-color, 2)
+  );
+
+}
+
+.console-navbar {
+  min-height: $console-navbar-height;
+  line-height: $console-navbar-height;
+  color: $console-navbar-color;
+  user-select: none;
+  padding: 0 $large-padding;
+  border-bottom: 1px solid $console-navbar-border-color;
+}
+
+.console .terminal {
+  flex: 1 1 $terminal-min-height;
+  padding-left: $large-padding;
+  // padding-right: $large-padding;
+}

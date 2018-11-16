@@ -1,0 +1,6 @@
+/.cache/
+/.env
+/vendor/
+/_assets/node_modules/
+/_assets/dist/
+composer.lock

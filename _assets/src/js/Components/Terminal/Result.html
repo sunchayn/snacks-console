@@ -1,0 +1,34 @@
+<div class="result-heading">
+  <div class="result-heading-text">
+    <h2>SHOWING RESULTS FOR :</h2>
+    <span s-template="query"></span>
+  </div>
+  <div class="result-heading-bookmark">
+    <button id="js-bookmark"><i class="empty heart icon"></i></button>
+  </div>
+</div>
+
+<div class="table result-content" id="scroll-hook">
+   <!-- is-loading -->
+  <div class="ui text loader">
+    loading content
+  </div>
+   <!-- data-simplebar -->
+  <table>
+    <thead>
+      <tr class="js-columns"></tr>
+    </thead>
+    <tbody class="result-content-rows js-rows">
+
+    </tbody>
+  </table>
+</div>
+
+<div class="result-info">
+  <span><span s-template="count"></span> rows in table</span>
+  <div class="result-pagination">
+    <span><span s-template="rowsPerPage"></span> rows per page</span>
+    <button class="js-prev"><i class="left arrow icon"></i></button><!-- 
+     --><button class="js-next"><i class="right arrow icon"></i></button>
+  </div>
+</div>

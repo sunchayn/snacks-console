@@ -1,0 +1,80 @@
+.terminal {
+  max-height: $terminal-min-height;
+  padding-bottom: $large-padding;
+  overflow-y: auto;
+
+  position: relative;
+  &::before {
+    content: "";
+    opacity: 0;
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+    background-color: transparent;
+    background: linear-gradient(
+      to bottom,
+      nth($console-background-color, 1),
+      rgba(#fff, 0));
+
+    will-change: opacity;
+    transition: opacity 300ms ease;
+  }
+}
+
+.terminal-row {
+  padding-bottom: $padding;
+  display: flex;
+
+  &:first-child {
+    margin-top: $large-margin;
+  }
+}
+
+
+.terminal-commandResponse {
+  padding-bottom: $padding;
+}
+
+.terminal-username,
+.terminal-working {
+  margin-right: $margin;
+  user-select: none;
+}
+
+.terminal-username {
+  color: $terminal-username-color;
+}
+
+.terminal-working > .terminal-working-date{
+  color: $terminal-working-color;
+}
+
+.terminal-text--error {
+  color: $terminal-text-error-color;
+}
+
+.terminal-query {
+  flex: 1 1 1px;
+  outline: 0;
+}
+
+.terminal-commandResponse {
+  // font-size: 14px;
+  line-height: 1;
+  & p {
+    margin-bottom: $margin;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.8;
+  }
+}
+
+.terminal-animationNode {
+  margin-left: $margin;
+}

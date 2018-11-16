@@ -1,0 +1,39 @@
+{
+  "name": "senda-console",
+  "version": "0.1.0",
+  "description": "senda console is an intuitive console to run and save SQL queries in the browser.",
+  "author": "Mazen Touati",
+  "private": false,
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "axios": "^0.18.0",
+    "babel-plugin-transform-html-import-to-string": "0.0.1",
+    "babelify": "^10.0.0",
+    "better-console": "^1.0.1",
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "buffer": "^5.2.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-print": "^5.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "source": "0.0.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-paths": "^2.1.0",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.2"
+  }
+}

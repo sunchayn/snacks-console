@@ -1,0 +1,58 @@
+.bookmarks {
+  flex: 1;
+
+  background: repeating-linear-gradient( 
+            #fff,
+            #fff $bookmarks-row-height,
+            $bookmarks-rows-stripe-color $bookmarks-row-height,
+            $bookmarks-rows-stripe-color $bookmarks-row-height * 2);
+
+}
+
+.bookmark-item {
+  height: $bookmarks-row-height;
+  background-color: #fff;
+  
+  & > button {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    opacity: .8;
+    will-change: opacity, color;
+    transition: opacity, color 300ms ease;
+
+    &:hover {
+      opacity: 1;
+      color: $color-primary;
+    }
+
+  }
+
+  &:nth-child(even) {
+    background-color: $bookmarks-rows-stripe-color;
+  }
+}
+
+
+.bookmark-item-key {
+  margin-right: $margin;
+  height: $bookmarks-row-height;
+  padding: $padding;
+  background: $color-primary;
+  color: #fff;
+}
+
+
+.bookmark-item-query {
+  flex: 1;
+  padding: $padding;
+}

@@ -1,0 +1,99 @@
+.simplebar-scroll-content {
+  flex: 1;
+}
+
+.table {
+
+  position: relative;
+
+  margin-top: $table-columns-height;
+
+  background: repeating-linear-gradient( 
+              #fff,
+              #fff $table-columns-height,
+              $table-rows-stripe-color $table-columns-height,
+              $table-rows-stripe-color $table-columns-height * 2);
+
+}
+
+table {
+  border: 0; outline: 0; margin: 0; padding: 0;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+table td, table th {
+  padding: 0;
+}
+
+table td > span, table th {
+  min-width: $table-column-min-width;
+  max-width: $table-column-max-width;
+}
+
+thead {
+  border-bottom: 1px solid $color-border;
+  position: fixed;
+  width: 100%; 
+  right: 0;
+  background: #fff;
+  margin-top: -$table-columns-height;
+  word-break: keep-all;
+  white-space: nowrap;
+  z-index: 500;
+  display: table-row-group;
+}
+
+tbody {
+  background-color: #fff;
+}
+tbody > tr:nth-child(even) {
+  background-color: $table-rows-stripe-color;
+}
+
+tbody > tr {
+
+  &:hover {
+    background: $table-rows-hover-color;
+    box-shadow: 0px 0px 10px 0px rgba($color-border-inactive, 0.5);
+  }
+}
+
+th {
+  border-right: 1px solid $color-border;
+  background: linear-gradient(to top, rgba($color-border, .5) 0%,rgba($color-border,0) 20%);
+
+  display: inline-block;
+  
+  &:last-child {
+    border-right: 0;
+  }
+
+  & > button {
+    padding: 0 $padding;
+    margin: 0;
+    height: $table-columns-height;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+td {
+  
+  & > span {
+    padding: 0 $padding;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: $table-columns-height;
+    line-height: $table-columns-height;
+    max-height: $table-columns-height;
+  }
+}

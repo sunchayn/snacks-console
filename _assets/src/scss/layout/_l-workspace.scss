@@ -1,0 +1,10 @@
+.l-workspace {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  min-height: $terminal-min-height + 200px;
+  max-height: 100vh;
+  
+  overflow: hidden;
+}

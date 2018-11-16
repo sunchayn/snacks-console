@@ -1,0 +1,23 @@
+.result.is-empty {
+  flex-direction: row;
+  align-items: center;
+}
+
+.table.is-loading {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 0; right: 0; left: 0; bottom: 0;
+    background-color: rgba(#fff, 0.85);
+
+  }
+
+  & .loader {
+    display: block;
+  }
+}
