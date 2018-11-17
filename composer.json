@@ -1,5 +1,5 @@
 {
-    "name": "mazentouati/sendaconsole",
+    "name": "mazentouati/snacks-console",
     "description": "Senda Console is an intuitive browser-based console to run and save SQL queries.",
     "type": "project",
     "keywords": ["sql", "database", "adminstration", "query", "php"],
