@@ -32,7 +32,7 @@ This is an initial version, it's just a prototype to test and enhance the curren
 
 currently the console supports the following commands:
 - Select
-- Updated
+- Update
 - Delete
 - Insert
 - Use `database`
