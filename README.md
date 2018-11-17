@@ -7,6 +7,8 @@
 
 An intuitive browser-based SQL console to run and save SQL queries.
 
+![demo](https://mazentouati.github.io/snacksconsole/public/static/screenshots/snacksconsole.gif)
+
 ## Usage guideline
 
 Snacks@console is a PHP based application. Before you use it, you have to make sure that your system is ready to run PHP applications. All web server such as [Laragon](https://laragon.org/) (recommended) or [XAMPP](https://www.apachefriends.org) provide bundle all the requirement to run a PHP based application in one package.
