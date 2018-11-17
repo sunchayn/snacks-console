@@ -1,6 +1,7 @@
 {
     "name": "mazentouati/sendaconsole",
     "description": "Senda Console is an intuitive browser-based console to run and save SQL queries.",
+    "type": "project",
     "keywords": ["sql", "database", "adminstration", "query", "php"],
     "license": "MIT",
     "authors": [
@@ -9,7 +10,6 @@
             "email": "mazen_touati@hotmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.1.0",
         "slim/slim": "^3.11",
